@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int type,day_count,price;
+
+    printf("Vehicle Type Selection (1:Sedan, 2:SUV): ");
+    scanf("%d",&type);
+
+    printf("Enter the number of days to rent: ");
+    scanf("%d",&day_count);
+
+    if(type == 1)
+    {
+        price = 1200 *day_count;
+    }
+
+    else if(type == 2)
+    {
+        price = 1800 * day_count;
+    }
+
+    if(day_count >= 7)
+    {
+        price = (price * 90) / 100;
+    }
+
+    printf("Total amount due: %d TL",price);
+
+    return 0;
+}
